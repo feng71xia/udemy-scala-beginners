@@ -80,4 +80,33 @@ object Recursion extends App {
   }
 
   println(fibonacci(8)) // 1 1 2 3 5 8 13, 21
+
+
+  def fibTailRec(sequenceSize: Int): Seq[Long] = {
+    @tailrec
+    def fib(n: Int, first: Long, second: Long, acc: List[Long] = Nil): List[Long] = {
+      println(s"$n $first $second $acc")
+      if (n <= 0) acc
+      else fib(n - 1, second, first + second, first :: acc)
+    }
+
+    fib(sequenceSize, 1L, 1L)
+  }
+
+  println(s"fibTailRec=${fibTailRec(6).head}")
+
+
+  def fibTailRec2(sequenceSize: Int): BigInt = {
+    @tailrec
+    def fib(n: Int, first: BigInt, second: BigInt): BigInt = {
+      println(s"$n $first $second")
+      if (n <= 2) second
+      else fib(n - 1, second, first + second)
+    }
+
+    fib(sequenceSize, 1, 1)
+  }
+
+  println(s"fibTailRec=${fibTailRec2(100)}")
+
 }

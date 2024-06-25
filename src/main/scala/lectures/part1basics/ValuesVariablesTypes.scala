@@ -1,7 +1,6 @@
 package lectures.part1basics
 
 object ValuesVariablesTypes extends App {
-
   val x: Int = 42
   println(x)
 
@@ -17,7 +16,7 @@ object ValuesVariablesTypes extends App {
   val anInt: Int = x
   val aShort: Short = 4613
   val aLong: Long = 5273985273895237L
-  val aFloat: Float = 2.0f
+  val aFloat: Float = 2.0
   val aDouble: Double = 3.14
 
   // variables

@@ -70,6 +70,7 @@ object AllThePatterns extends App {
   // 8 - multi-patterns
   val multipattern = aList match {
     case Empty | Cons(0, _) => // compound pattern (multi-pattern)
+    case _ =>
   }
 
   // 9 - if guards
@@ -77,9 +78,10 @@ object AllThePatterns extends App {
     case Cons(_, Cons(specialElement, _)) if specialElement % 2 == 0 =>
   }
 
-  val anything: Any = ???
+  val anything: Any = 1
   anything match {
     case _: RuntimeException | _:NullPointerException => ""
+    case _ =>
   }
 
   // ALL.

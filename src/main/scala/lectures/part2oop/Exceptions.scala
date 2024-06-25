@@ -7,7 +7,7 @@ object Exceptions extends App {
   //  this ^^ will crash with a NPE
 
   // 1. throwing exceptions
-  //  val aWeirdValue: String = throw new NullPointerException // also crashes
+  // val aWeirdValue: String = throw new NullPointerException // also crashes
 
   // throwable classes extend the Throwable class.
   // Exception and Error are the major Throwable subtypes
